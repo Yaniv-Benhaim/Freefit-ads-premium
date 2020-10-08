@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/featuredFragment">
+
+    <action
+        android:id="@+id/action_global_trackingFragment"
+        app:destination="@id/trackingFragment"
+        app:launchSingleTop="true" />
+
+    <action
+        android:id="@+id/action_global_featuredFragment"
+        app:destination="@id/featuredFragment"
+        app:launchSingleTop="true" />
+
+    <fragment
+        android:id="@+id/featuredFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.featured.FeaturedFragment"
+        android:label="Featured"
+        tools:layout="@layout/featured_fragment">
+        <action
+            android:id="@+id/action_featuredFragment_to_storeFragment"
+            app:destination="@id/storeFragment" />
+
+        <action
+            android:id="@+id/action_featuredFragment_to_statisticsFragment"
+            app:destination="@id/statisticsFragment" />
+        <action
+            android:id="@+id/action_featuredFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_featuredFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_featuredFragment_to_shortWorkoutFragment"
+            app:destination="@id/shortWorkoutFragment" />
+        <action
+            android:id="@+id/action_featuredFragment_to_setupFragment"
+            app:destination="@id/setupFragment" />
+        <action
+            android:id="@+id/action_featuredFragment_to_runFragment"
+            app:destination="@id/runFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.history.HistoryFragment"
+        android:label="history_fragment"
+        tools:layout="@layout/history_fragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/storeFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.store.StoreFragment"
+        android:label="store_fragment"
+        tools:layout="@layout/store_fragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.settings.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/statisticsFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.statistics.StatisticsFragment"
+        android:label="statistics_fragment"
+        tools:layout="@layout/statistics_fragment">
+
+    </fragment>
+    <fragment
+        android:id="@+id/shortWorkoutFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.shortworkout.ShortWorkoutFragment"
+        android:label="short_workout_fragment"
+        tools:layout="@layout/short_workout_fragment">
+        <action
+            android:id="@+id/action_shortWorkoutFragment_to_featuredFragment"
+            app:destination="@id/featuredFragment" />
+        <action
+            android:id="@+id/action_shortWorkoutFragment_to_workoutStartedFragment"
+            app:destination="@id/workoutStartedFragment" />
+        <action
+            android:id="@+id/action_shortWorkoutFragment_to_workoutViewFragment"
+            app:destination="@id/workoutViewFragment" />
+        <action
+            android:id="@+id/action_shortWorkoutFragment_to_fiveSecondCountDownFragment"
+            app:destination="@id/fiveSecondCountDownFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/runFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.run.RunFragment"
+        android:label="RunFragment">
+        <action
+            android:id="@+id/action_runFragment_to_trackingFragment"
+            app:destination="@id/trackingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.run.SetupFragment"
+        android:label="SetupFragment">
+        <action
+            android:id="@+id/action_setupFragment_to_runFragment"
+            app:destination="@id/runFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/trackingFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.run.TrackingFragment"
+        android:label="TrackingFragment">
+        <action
+            android:id="@+id/action_trackingFragment_to_runFragment"
+            app:destination="@id/runFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workoutStartedFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.shortworkout.WorkoutStartedFragment"
+        android:label="fragment_workout_started"
+        tools:layout="@layout/fragment_workout_started">
+        <action
+            android:id="@+id/action_workoutStartedFragment_to_shortWorkoutFragment"
+            app:destination="@id/shortWorkoutFragment" />
+        <action
+            android:id="@+id/action_workoutStartedFragment_to_featuredFragment"
+            app:destination="@id/featuredFragment" />
+        <action
+            android:id="@+id/action_workoutStartedFragment_to_shortWorkoutEndFragment"
+            app:destination="@id/shortWorkoutEndFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shortWorkoutEndFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.shortworkout.ShortWorkoutEndFragment"
+        android:label="fragment_short_workout_end"
+        tools:layout="@layout/fragment_short_workout_end">
+        <action
+            android:id="@+id/action_shortWorkoutEndFragment_to_featuredFragment"
+            app:destination="@id/featuredFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/workoutViewFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.shortworkoutpro.WorkoutViewFragment"
+        android:label="fragment_workout_view"
+        tools:layout="@layout/fragment_workout_view">
+        <action
+            android:id="@+id/action_workoutViewFragment_to_shortWorkoutFragment"
+            app:destination="@id/shortWorkoutFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fiveSecondCountDownFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.shortworkoutpro.FiveSecondCountDownFragment"
+        android:label="fragment_five_second_count_down"
+        tools:layout="@layout/fragment_five_second_count_down">
+        <action
+            android:id="@+id/action_fiveSecondCountDownFragment_to_workoutViewFragment"
+            app:destination="@id/workoutViewFragment" />
+    </fragment>
+</navigation>

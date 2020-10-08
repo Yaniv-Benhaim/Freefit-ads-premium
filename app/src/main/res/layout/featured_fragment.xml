@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/featured"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".ui.fragments.featured.FeaturedFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_home_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- First Container -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1.5">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:contentDescription="Gradient Background"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/bluegradientbg"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvWorkoutsHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/archivo_black"
+                    android:text="@string/featured_title"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="26sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvWorkoutsHomeDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/archivo_black"
+                    android:text="@string/featured_description"
+                    android:textColor="#DDDDDD"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvWorkoutsHome" />
+
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal"
+                    android:scrollbars="none"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvWorkoutsHomeDescription">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/llAthenaWorkout"
+                            android:layout_width="200dp"
+                            android:layout_height="100dp"
+                            android:background="@color/text_color_white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="@font/archivo_black"
+                                android:text="@string/athena_workout"
+                                android:textColor="#000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:text="@string/athena_workout_description"
+                                android:textColor="#000"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#A5A5A5" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="@string/athena_duration"
+                                    android:textColor="#000"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:background="@drawable/black_selected_circle" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:background="@drawable/item_circular_color_grey_bg" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:background="@drawable/item_circular_color_grey_bg" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="Dificulty"
+                                    android:textColor="#000"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:background="@drawable/black_selected_circle" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:background="@drawable/item_circular_color_grey_bg" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:background="@drawable/item_circular_color_grey_bg" />
+
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="15dp"
+                                android:layout_height="match_parent" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llMorpheusWorkout"
+                            android:layout_width="200dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="15dp"
+                            android:background="@color/text_color_white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="@font/archivo_black"
+                                android:text="MORPHEUS"
+
+                                android:textColor="#000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:text="Full Body"
+                                android:textColor="#000"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#A5A5A5" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="Duration"
+                                    android:textColor="#000"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:background="@drawable/black_selected_circle" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:background="@drawable/black_selected_circle" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:background="@drawable/item_circular_color_grey_bg" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="Dificulty"
+                                    android:textColor="#000"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:background="@drawable/black_selected_circle" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:background="@drawable/item_circular_color_grey_bg" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:background="@drawable/item_circular_color_grey_bg" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llPrometheusWorkout"
+                            android:layout_width="200dp"
+                            android:layout_height="100dp"
+                            android:layout_marginLeft="15dp"
+                            android:background="@color/text_color_white"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:layout_marginTop="15dp"
+                                android:fontFamily="@font/archivo_black"
+                                android:text="PROMETHEUS"
+                                android:textColor="#000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="15dp"
+                                android:text="Core, Lower"
+                                android:textColor="#000"
+                                android:textSize="14sp"
+                                android:textStyle="normal" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#A5A5A5" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="Duration"
+                                    android:textColor="#000"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:background="@drawable/black_selected_circle" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:background="@drawable/black_selected_circle" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:background="@drawable/item_circular_color_grey_bg" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="20dp"
+                                    android:text="Diff+ iculty"
+                                    android:textColor="#000"
+                                    android:textSize="14sp"
+                                    android:textStyle="normal" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:background="@drawable/black_selected_circle" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:background="@drawable/black_selected_circle" />
+
+                                <LinearLayout
+                                    android:layout_width="5dp"
+                                    android:layout_height="5dp"
+                                    android:layout_marginLeft="2dp"
+                                    android:layout_marginRight="15dp"
+                                    android:background="@drawable/item_circular_color_grey_bg" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </HorizontalScrollView>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Second Container -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_single_exercises"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSingle"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/archivo_black"
+                    android:text="Single"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="18sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvExercises"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/archivo_black"
+                    android:text="Exercises"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSingle" />
+
+                <TextView
+                    android:id="@+id/tvSingleExerciseDescription"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/archivo_black"
+                    android:text="Target specific muscles"
+                    android:textColor="#EEEEEE"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvExercises" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Third Container -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clShortWorkoutBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_short_workout"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvShort"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/archivo_black"
+                    android:text="Short"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="18sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvWorkout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/archivo_black"
+                    android:text="Workout"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvShort" />
+
+                <TextView
+                    android:id="@+id/tvShortWorkoutDescription"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/archivo_black"
+                    android:text="Seven minute workout"
+                    android:textColor="#EEEEEE"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvWorkout" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Fourth Container -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clSprintsAndRuns"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/img_road"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvSprints"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/archivo_black"
+                    android:text="Sprints"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="18sp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvRuns"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/archivo_black"
+                    android:text="and Runs"
+                    android:textColor="@color/text_color_white"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvSprints" />
+
+                <TextView
+                    android:id="@+id/tvSprintsAndRunsDescription"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="15dp"
+                    android:fontFamily="@font/archivo_black"
+                    android:text="Train on the road or track"
+                    android:textColor="#EEEEEE"
+                    android:textSize="12sp"
+                    android:textStyle="normal"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvRuns" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Fifth Container with 2 elements -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:orientation="horizontal">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clBmiCalculatorBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2.5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="175dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_muscle"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvBmi"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/archivo_black"
+                        android:text="BMI"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="18sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvCalculator"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/archivo_black"
+                        android:text="Calculator"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvBmi" />
+
+                    <TextView
+                        android:id="@+id/tvBmiCalculatorHome"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/archivo_black"
+                        android:text="Check out your current BMI"
+                        android:textColor="#EEEEEE"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvCalculator" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/clWorkoutHistoryBtn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="175dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/img_short_workout"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvHistoryHome"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="30dp"
+                        android:fontFamily="@font/archivo_black"
+                        android:text="Workout"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="18sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvHistoryHome2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/archivo_black"
+                        android:text="History"
+                        android:textColor="@color/text_color_white"
+                        android:textSize="18sp"
+                        android:textStyle="normal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvHistoryHome" />
+
+                    <TextView
+                        android:id="@+id/tvHistoryHomeDisc"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/archivo_black"
+                        android:text="Keep track of your progress"
+                        android:textColor="#EEEEEE"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/tvHistoryHome2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+
+            <!-- END -->
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

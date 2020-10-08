@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "618279027725",
+    "firebase_url": "https://freefit-c5355.firebaseio.com",
+    "project_id": "freefit-c5355",
+    "storage_bucket": "freefit-c5355.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618279027725:android:a5c9d537bf476ed2da0144",
+        "android_client_info": {
+          "package_name": "tech.gamedev.a7minuteworkoutapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "618279027725-k8l86fc66efcvrh8lk7rilqd83tp0gpr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChFwaZozclO1eu6g1nUSoLrQLnMn3yQP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "618279027725-k8l86fc66efcvrh8lk7rilqd83tp0gpr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:618279027725:android:326c2e814a1dbf0bda0144",
+        "android_client_info": {
+          "package_name": "tech.gamedev.freefit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "618279027725-k8l86fc66efcvrh8lk7rilqd83tp0gpr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChFwaZozclO1eu6g1nUSoLrQLnMn3yQP0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "618279027725-k8l86fc66efcvrh8lk7rilqd83tp0gpr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

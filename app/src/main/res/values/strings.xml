@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">FreeFit</string>
+    <string name="google_maps_key">AIzaSyAaZ1NtZYwW63vFATCUZylV07_8KUYMbhg</string>
+    <string name="featured_title">Workouts</string>
+    <string name="featured_description">Signature FreeFit Workouts</string>
+    <string name="athena_workout">ATHENA</string>
+    <string name="athena_workout_description">Core, Lower</string>
+    <string name="athena_duration">Duration</string>
+    <string name="what_to_know">What to know</string>
+    <string name="short_workout_description">A signature FreeFit workout. It\'s you against the clock. Aim to complete this workout as fast as possible while maintaining proper technique. The time it takes you to complete this exercise can be an indication of your progress</string>
+    <string name="maximum_pace">Maximum Pace</string>
+    <string name="no_equipment">No Equipment</string>
+    <string name="_60s_pushups">60s Pushups</string>
+    <string name="_60s_step_ups">60s Step ups</string>
+    <string name="_60s_tricep_dips">60s Tricep dips</string>
+    <string name="_60s_high_knees">60s High knees</string>
+
+    <string-array name="filter_options">
+        <item>Date</item>
+        <item>Running Time</item>
+        <item>Distance</item>
+        <item>Average Speed</item>
+        <item>Calories Burned</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="get_ready_for">Get ready for</string>
+</resources>
