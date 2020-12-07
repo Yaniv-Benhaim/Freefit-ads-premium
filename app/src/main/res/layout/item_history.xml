@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/tvHistoryWorkoutTitle"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorPrimaryDark"
+        android:elevation="6dp"
+        android:fontFamily="@font/camber_bold"
+        android:gravity="center"
+        android:text="Short Workout"
+        android:textColor="@color/text_color_white"
+        android:textSize="32sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivBtnDeleteHistoryItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:elevation="11dp"
+        android:src="@drawable/ic_close_white"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvHistoryAvgCaloriesBurned"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="20dp"
+        android:elevation="6dp"
+        android:fontFamily="@font/camber_medium"
+        android:gravity="center"
+        android:text="calories burned: 200-270"
+        android:textColor="@color/text_color_white"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHistoryWorkoutTitle" />
+
+    <TextView
+        android:id="@+id/tvTotalWorkoutsCompleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:elevation="6dp"
+        android:fontFamily="@font/camber_medium"
+        android:gravity="center"
+        android:text="Workouts completed: 12"
+        android:textColor="@color/text_color_white"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHistoryAvgCaloriesBurned" />
+
+    <TextView
+        android:id="@+id/tvMuscleGroupsTrained"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:elevation="6dp"
+        android:fontFamily="@font/camber_medium"
+        android:gravity="center"
+        android:text="Muscle Group: Full Body"
+        android:textColor="@color/text_color_white"
+        android:textSize="16sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTotalWorkoutsCompleted" />
+
+
+    <TextView
+        android:id="@+id/tvHistoryWorkoutDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="6dp"
+        android:fontFamily="@font/camber_medium_italic"
+        android:text="11/12/2020"
+        android:textColor="@color/text_color_white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/lottieView"
+        app:layout_constraintRight_toRightOf="@id/lottieView"
+        app:layout_constraintTop_toBottomOf="@id/lottieView" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="10dp"
+        android:elevation="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvHistoryWorkoutTitle"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/chart" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvHistoryContainer"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        app:cardCornerRadius="15dp"
+        app:cardElevation="4dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/ivHistoryWorkoutImage"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:foreground="#30FFFFFF"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_featured_top_bg" />
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

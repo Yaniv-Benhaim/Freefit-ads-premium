@@ -23,6 +23,30 @@ class FeaturedFragment : Fragment(R.layout.featured_fragment) {
         clSprintsAndRuns.setOnClickListener {
             findNavController().navigate(R.id.action_featuredFragment_to_setupFragment)
         }
+
+        llAthenaWorkout.setOnClickListener {
+            findNavController().navigate(R.id.action_featuredFragment_to_countDownAthenaFragment)
+        }
+
+        llMorpheusWorkout.setOnClickListener {
+            findNavController().navigate(R.id.action_featuredFragment_to_countDownMorpheusFragment)
+        }
+
+        llPrometheusWorkout.setOnClickListener {
+            findNavController().navigate(R.id.action_featuredFragment_to_countDownPrometheusFragment)
+        }
+
+        clWorkoutHistoryBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_featuredFragment_to_historyFragment)
+        }
+
+        clBmiCalculatorBtn.setOnClickListener {
+            findNavController().navigate(R.id.action_featuredFragment_to_settingsFragment)
+        }
+
+        clBtnCompleteGymRoutines.setOnClickListener {
+            findNavController().navigate(R.id.action_featuredFragment_to_gymRoutinesFragment)
+        }
     }
 
 }

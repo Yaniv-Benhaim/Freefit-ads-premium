@@ -2,6 +2,7 @@ package tech.gamedev.freefit.data.db.runningdata
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
+import tech.gamedev.freefit.data.db.workoutdata.Workout
 
 @Dao
 interface RunDAO {
@@ -13,6 +14,15 @@ interface RunDAO {
 
     @Delete
     suspend fun deleteRun(run: Run)
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertWorkout(workout: Workout)
+
+    @Delete
+    suspend fun deleteWorkout(workout: Workout)
+
+    @Query("SELECT * FROM workout_table")
+    fun getAllWorkouts(): LiveData<List<Workout>>
 
     @Query("SELECT * FROM running_table ORDER BY timestamp DESC")
     fun getAllRunsSortedByDate(): LiveData<List<Run>>

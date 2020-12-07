@@ -31,7 +31,12 @@ class ShowRemainingExercisesAdapter :
     override fun onBindViewHolder(holder: WorkoutViewHolder, position: Int) {
         val workout = Workouts.getShortWorkoutList()[position]
         holder.itemView.apply {
+
+
             Glide.with(this).load(workout.getImage()).into(ivWorkoutItem)
+
+
+
             tvItemWorkout.text = workout.getName()
 
 

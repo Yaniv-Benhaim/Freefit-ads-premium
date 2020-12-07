@@ -3,16 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/featuredFragment">
+    app:startDestination="@id/loginFragment">
 
     <action
         android:id="@+id/action_global_trackingFragment"
         app:destination="@id/trackingFragment"
-        app:launchSingleTop="true" />
+        app:enterAnim="@anim/slide_in_left"
+        app:exitAnim="@anim/slide_out_right"
+        app:launchSingleTop="true"
+        app:popEnterAnim="@anim/slide_in_right"
+        app:popExitAnim="@anim/slide_out_left" />
 
     <action
         android:id="@+id/action_global_featuredFragment"
         app:destination="@id/featuredFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
         app:launchSingleTop="true" />
 
     <fragment
@@ -22,26 +28,78 @@
         tools:layout="@layout/featured_fragment">
         <action
             android:id="@+id/action_featuredFragment_to_storeFragment"
-            app:destination="@id/storeFragment" />
+            app:destination="@id/storeFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
 
         <action
             android:id="@+id/action_featuredFragment_to_statisticsFragment"
-            app:destination="@id/statisticsFragment" />
+            app:destination="@id/statisticsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_featuredFragment_to_settingsFragment"
-            app:destination="@id/settingsFragment" />
+            app:destination="@id/settingsFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_featuredFragment_to_historyFragment"
-            app:destination="@id/historyFragment" />
+            app:destination="@id/historyFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_featuredFragment_to_shortWorkoutFragment"
-            app:destination="@id/shortWorkoutFragment" />
+            app:destination="@id/shortWorkoutFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_featuredFragment_to_setupFragment"
-            app:destination="@id/setupFragment" />
+            app:destination="@id/setupFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_featuredFragment_to_runFragment"
-            app:destination="@id/runFragment" />
+            app:destination="@id/runFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_featuredFragment_to_countDownAthenaFragment"
+            app:destination="@id/countDownAthenaFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_featuredFragment_to_countDownMorpheusFragment"
+            app:destination="@id/countDownMorpheusFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_featuredFragment_to_countDownPrometheusFragment"
+            app:destination="@id/countDownPrometheusFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_featuredFragment_to_gymRoutinesFragment"
+            app:destination="@id/gymRoutinesFragment" />
     </fragment>
     <fragment
         android:id="@+id/historyFragment"
@@ -73,21 +131,21 @@
     </fragment>
     <fragment
         android:id="@+id/shortWorkoutFragment"
-        android:name="tech.gamedev.freefit.ui.fragments.shortworkout.ShortWorkoutFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.workoutfragments.shortworkout.ShortWorkoutFragment"
         android:label="short_workout_fragment"
         tools:layout="@layout/short_workout_fragment">
         <action
             android:id="@+id/action_shortWorkoutFragment_to_featuredFragment"
-            app:destination="@id/featuredFragment" />
-        <action
-            android:id="@+id/action_shortWorkoutFragment_to_workoutStartedFragment"
-            app:destination="@id/workoutStartedFragment" />
-        <action
-            android:id="@+id/action_shortWorkoutFragment_to_workoutViewFragment"
-            app:destination="@id/workoutViewFragment" />
+            app:destination="@id/featuredFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
         <action
             android:id="@+id/action_shortWorkoutFragment_to_fiveSecondCountDownFragment"
-            app:destination="@id/fiveSecondCountDownFragment" />
+            app:destination="@id/fiveSecondCountDownFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
         android:id="@+id/runFragment"
@@ -95,7 +153,11 @@
         android:label="RunFragment">
         <action
             android:id="@+id/action_runFragment_to_trackingFragment"
-            app:destination="@id/trackingFragment" />
+            app:destination="@id/trackingFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
         android:id="@+id/setupFragment"
@@ -103,7 +165,11 @@
         android:label="SetupFragment">
         <action
             android:id="@+id/action_setupFragment_to_runFragment"
-            app:destination="@id/runFragment" />
+            app:destination="@id/runFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
         android:id="@+id/trackingFragment"
@@ -111,48 +177,111 @@
         android:label="TrackingFragment">
         <action
             android:id="@+id/action_trackingFragment_to_runFragment"
-            app:destination="@id/runFragment" />
+            app:destination="@id/runFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_trackingFragment_to_featuredFragment"
+            app:destination="@id/featuredFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
         android:id="@+id/workoutStartedFragment"
-        android:name="tech.gamedev.freefit.ui.fragments.shortworkout.WorkoutStartedFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.workoutfragments.shortworkout.WorkoutStartedFragment"
         android:label="fragment_workout_started"
         tools:layout="@layout/fragment_workout_started">
         <action
-            android:id="@+id/action_workoutStartedFragment_to_shortWorkoutFragment"
-            app:destination="@id/shortWorkoutFragment" />
-        <action
-            android:id="@+id/action_workoutStartedFragment_to_featuredFragment"
-            app:destination="@id/featuredFragment" />
-        <action
             android:id="@+id/action_workoutStartedFragment_to_shortWorkoutEndFragment"
-            app:destination="@id/shortWorkoutEndFragment" />
+            app:destination="@id/shortWorkoutEndFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
     </fragment>
     <fragment
         android:id="@+id/shortWorkoutEndFragment"
-        android:name="tech.gamedev.freefit.ui.fragments.shortworkout.ShortWorkoutEndFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.workoutfragments.shortworkout.ShortWorkoutEndFragment"
         android:label="fragment_short_workout_end"
-        tools:layout="@layout/fragment_short_workout_end">
-        <action
-            android:id="@+id/action_shortWorkoutEndFragment_to_featuredFragment"
-            app:destination="@id/featuredFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_short_workout_end" />
     <fragment
         android:id="@+id/workoutViewFragment"
-        android:name="tech.gamedev.freefit.ui.fragments.shortworkoutpro.WorkoutViewFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.workoutfragments.shortworkoutpro.WorkoutViewFragment"
         android:label="fragment_workout_view"
-        tools:layout="@layout/fragment_workout_view">
-        <action
-            android:id="@+id/action_workoutViewFragment_to_shortWorkoutFragment"
-            app:destination="@id/shortWorkoutFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_workout_view" />
     <fragment
         android:id="@+id/fiveSecondCountDownFragment"
-        android:name="tech.gamedev.freefit.ui.fragments.shortworkoutpro.FiveSecondCountDownFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.workoutfragments.shortworkoutpro.FiveSecondCountDownFragment"
         android:label="fragment_five_second_count_down"
         tools:layout="@layout/fragment_five_second_count_down">
         <action
             android:id="@+id/action_fiveSecondCountDownFragment_to_workoutViewFragment"
-            app:destination="@id/workoutViewFragment" />
+            app:destination="@id/workoutViewFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
     </fragment>
+    <fragment
+        android:id="@+id/countDownAthenaFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.workoutfragments.athena.CountDownAthenaFragment"
+        android:label="CountDownAthenaFragment">
+        <action
+            android:id="@+id/action_countDownAthenaFragment_to_athenaWorkoutViewFragment"
+            app:destination="@id/athenaWorkoutViewFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/athenaWorkoutViewFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.workoutfragments.athena.AthenaWorkoutViewFragment"
+        android:label="AthenaWorkoutViewFragment" />
+    <fragment
+        android:id="@+id/countDownMorpheusFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.workoutfragments.morpheus.CountDownMorpheusFragment"
+        android:label="CountDownMorpheusFragment">
+        <action
+            android:id="@+id/action_countDownMorpheusFragment_to_morpheusWorkoutViewFragment"
+            app:destination="@id/morpheusWorkoutViewFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/morpheusWorkoutViewFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.workoutfragments.morpheus.MorpheusWorkoutViewFragment"
+        android:label="MorpheusWorkoutViewFragment" />
+    <fragment
+        android:id="@+id/countDownPrometheusFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.workoutfragments.prometheus.CountDownPrometheusFragment"
+        android:label="CountDownPrometheusFragment">
+        <action
+            android:id="@+id/action_countDownPrometheusFragment_to_prometheusWorkoutViewFragment"
+            app:destination="@id/prometheusWorkoutViewFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/prometheusWorkoutViewFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.workoutfragments.prometheus.PrometheusWorkoutViewFragment"
+        android:label="PrometheusWorkoutViewFragment" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_featuredFragment"
+            app:destination="@id/featuredFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gymRoutinesFragment"
+        android:name="tech.gamedev.freefit.ui.fragments.gymroutines.GymRoutinesFragment"
+        android:label="fragment_gym_routines"
+        tools:layout="@layout/fragment_gym_routines" />
 </navigation>

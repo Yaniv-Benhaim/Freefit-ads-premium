@@ -44,6 +44,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "618279027725-7e7s8d4koq1nnl3t7kvlpjnsl5u5sc2o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tech.gamedev.freefit",
+            "certificate_hash": "1972b4eb8bc910983f2cd15cbbe57bfb7763f5bf"
+          }
+        },
+        {
           "client_id": "618279027725-k8l86fc66efcvrh8lk7rilqd83tp0gpr.apps.googleusercontent.com",
           "client_type": 3
         }

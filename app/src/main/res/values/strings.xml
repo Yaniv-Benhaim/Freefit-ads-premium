@@ -25,4 +25,17 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="get_ready_for">Get ready for</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="shortworkout_calories_burned">Calories Burned: 200-270</string>
+    <string name="athena_workout_calories_burned">Calories Burned: 150-220</string>
+    <string name="prometheus_workout_calories_burned">Calories Burned: 250-300</string>
+    <string name="morpheus_workout_calories_burned">Calories Burned: 200-250</string>
+    <string name="short_workout_total_exercises">Workouts completed: 12</string>
+    <string name="short_workout_muscle_group">Muscle Group: Full Body</string>
+    <string name="ahtena_workout_total_exercises">Workouts completed: 15</string>
+    <string name="athena_workout_muscle_group">Muscle Group: Core, Lower</string>
+    <string name="morpheus_workout_total_exercises">Workouts completed: 15</string>
+    <string name="morpheus_workout_muscle_group">Muscle Group: Full Body</string>
+    <string name="prometheus_workout_total_exercises">Workouts completed: 25</string>
+    <string name="prometheus_workout_muscle_group">Muscle Group: Core, Lower</string>
 </resources>

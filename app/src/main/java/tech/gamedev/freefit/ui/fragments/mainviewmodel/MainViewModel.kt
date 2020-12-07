@@ -7,6 +7,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import tech.gamedev.freefit.data.db.other.SortType
 import tech.gamedev.freefit.data.db.runningdata.Run
+import tech.gamedev.freefit.data.db.workoutdata.Workout
 import tech.gamedev.freefit.data.repositories.MainRepository
 
 class MainViewModel @ViewModelInject constructor(
@@ -20,11 +21,21 @@ class MainViewModel @ViewModelInject constructor(
     private val runsSortedByTimeInMillis = mainRepository.getAllRunsSortedByTimeInMillis()
     private val runsSortedByAvgSpeed = mainRepository.getAllRunsSortedByAvgSpeed()
 
+    private val allWorkouts = mainRepository.getAllWorkouts()
+
+
     val runs = MediatorLiveData<List<Run>>()
+
+    val workouts = MediatorLiveData<List<Workout>>()
 
     var sortType = SortType.DATE
 
     init {
+
+        workouts.addSource(allWorkouts) {
+            workouts.value = it
+        }
+
         runs.addSource(runsSortedByDate) { result ->
             if (sortType == SortType.DATE) {
                 result?.let { runs.value = it }
@@ -74,6 +85,14 @@ class MainViewModel @ViewModelInject constructor(
 
     fun deleteRun(run: Run) = viewModelScope.launch {
         mainRepository.deleteRun(run)
+    }
+
+    fun insertWorkout(workout: Workout) = viewModelScope.launch {
+        mainRepository.insertWorkout(workout)
+    }
+
+    fun deleteWorkout(workout: Workout) = viewModelScope.launch {
+        mainRepository.deleteWorkout(workout)
     }
 
 }

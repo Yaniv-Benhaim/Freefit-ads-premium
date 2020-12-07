@@ -30,10 +30,15 @@ class WorkoutAdapter : RecyclerView.Adapter<WorkoutAdapter.WorkoutViewHolder>() 
             Glide.with(this).load(workout.getImage()).into(ivWorkoutItem)
             tvItemWorkout.text = workout.getName()
 
+
         }
+
+
     }
 
     override fun getItemCount(): Int {
         return Workouts.getShortWorkoutList().size
     }
+
+
 }

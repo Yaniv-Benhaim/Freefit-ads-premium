@@ -29,9 +29,10 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="270dp"
+                    android:foreground="@drawable/foreground_transparent"
                     android:contentDescription="Gradient Background"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/bluegradientbg"
+                    android:src="@drawable/top_bg"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -350,7 +351,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="20dp"
-                                    android:text="Diff+ iculty"
+                                    android:text="Difficulty"
                                     android:textColor="#000"
                                     android:textSize="14sp"
                                     android:textStyle="normal" />
@@ -388,6 +389,7 @@
 
             <!-- Second Container -->
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/clBtnCompleteGymRoutines"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
@@ -396,8 +398,9 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="175dp"
+                    android:foreground="#30000000"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/img_single_exercises"
+                    android:src="@drawable/single_exercises"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -407,7 +410,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="30dp"
                     android:fontFamily="@font/archivo_black"
-                    android:text="Single"
+                    android:text="Complete Gym"
                     android:textColor="@color/text_color_white"
                     android:textSize="18sp"
                     app:layout_constraintLeft_toLeftOf="parent"
@@ -419,7 +422,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="20dp"
                     android:fontFamily="@font/archivo_black"
-                    android:text="Exercises"
+                    android:text="Routines"
                     android:textColor="@color/text_color_white"
                     android:textSize="18sp"
                     android:textStyle="normal"
@@ -433,7 +436,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/archivo_black"
-                    android:text="Target specific muscles"
+                    android:text="Choose a routine and go!"
                     android:textColor="#EEEEEE"
                     android:textSize="12sp"
                     android:textStyle="normal"
@@ -454,7 +457,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="175dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/img_short_workout"
+                    android:foreground="#40000000"
+                    android:src="@drawable/img_short_workout2"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
@@ -490,7 +494,7 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="15dp"
                     android:fontFamily="@font/archivo_black"
-                    android:text="Seven minute workout"
+                    android:text="Full body workout"
                     android:textColor="#EEEEEE"
                     android:textSize="12sp"
                     android:textStyle="normal"
@@ -574,7 +578,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="175dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/img_muscle"
+                        android:foreground="#60000000"
+                        android:src="@drawable/img_bmi"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView
@@ -631,7 +636,8 @@
                         android:layout_width="match_parent"
                         android:layout_height="175dp"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/img_short_workout"
+                        android:foreground="@drawable/foreground_transparent"
+                        android:src="@drawable/img_history"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <TextView

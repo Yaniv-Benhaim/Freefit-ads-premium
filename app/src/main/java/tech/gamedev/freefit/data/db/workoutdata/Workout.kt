@@ -1,6 +1,9 @@
 package tech.gamedev.freefit.data.db.workoutdata
 
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
+@Entity(tableName = "workout_table")
 class Workout(
 
     private var img: Int = 0,
@@ -13,6 +16,8 @@ class Workout(
 ) {
 //GETTERS AND SETTERS
 
+    @PrimaryKey(autoGenerate = true)
+    var id: Int = 0
     fun getAmount(): String {
         return amount
     }
@@ -60,5 +65,17 @@ class Workout(
 
     fun setIsSelected(isSelected: Boolean) {
         this.isSelected = isSelected
+    }
+
+    fun getTimeStamp(): Long {
+        return timeStamp
+    }
+
+    fun getImg(): Int {
+        return img
+    }
+
+    fun setTimeStamp(timeStamp: Long) {
+        this.timeStamp = timeStamp
     }
 }

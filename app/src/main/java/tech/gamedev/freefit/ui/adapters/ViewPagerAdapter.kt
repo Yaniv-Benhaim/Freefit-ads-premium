@@ -3,24 +3,48 @@ package tech.gamedev.freefit.ui.adapters
 import android.content.Context
 import android.media.MediaPlayer
 import android.net.Uri
-import android.os.CountDownTimer
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_video_view.view.*
 import tech.gamedev.freefit.R
 import tech.gamedev.freefit.data.db.workoutdata.Workout
+import tech.gamedev.freefit.ui.fragments.workoutfragments.shortworkoutpro.WorkoutViewFragment
 
-class ViewPagerAdapter(val workouts: List<Workout>, val context: Context) :
+class ViewPagerAdapter(
+    val workouts: List<Workout>,
+    val context: Context,
+    private val listener: OnItemClickListener
+) :
     RecyclerView.Adapter<ViewPagerAdapter.ViewPagerViewHolder>() {
 
 
     val listOfExercises = ArrayList<Workout>(workouts)
     var player: MediaPlayer? = null
 
-    inner class ViewPagerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
+    inner class ViewPagerViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
+        View.OnClickListener {
+
+        init {
+            itemView.btnFinishWorkoutVP.setOnClickListener(this)
+
+            itemView.ivBtnCancelWorkout.setOnClickListener {
+                WorkoutViewFragment.customDialogForBackBtn(itemView)
+            }
+        }
+
+        override fun onClick(v: View?) {
+
+            val position = adapterPosition
+            if (position != RecyclerView.NO_POSITION) {
+                val workout: Workout = listOfExercises[position]
+                listener.addWorkoutToDatabase(workout)
+            }
+
+        }
+
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewPagerViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(
@@ -34,6 +58,8 @@ class ViewPagerAdapter(val workouts: List<Workout>, val context: Context) :
 
         val workout = listOfExercises[position]
 
+
+
         if (position == listOfExercises.size - 1) {
 
             holder.itemView.apply {
@@ -42,31 +68,6 @@ class ViewPagerAdapter(val workouts: List<Workout>, val context: Context) :
 
                 }
 
-
-
-                btnResumeWorkout.setOnClickListener {
-
-                }
-
-                btnFinishWorkoutVP.setOnClickListener {
-
-                    //Playing sound when finishing exercise
-                    player = MediaPlayer.create(context, R.raw.applause)
-                    player!!.start()
-
-                    val timer = object : CountDownTimer(3000, 1000) {
-                        override fun onTick(millisUntilFinished: Long) {
-
-
-                        }
-
-                        override fun onFinish() {
-                            player?.stop()
-                            findNavController().navigate(R.id.action_global_featuredFragment)
-                        }
-
-                    }.start()
-                }
             }
 
 
@@ -98,6 +99,10 @@ class ViewPagerAdapter(val workouts: List<Workout>, val context: Context) :
 
     override fun getItemCount(): Int {
         return listOfExercises.size
+    }
+
+    interface OnItemClickListener {
+        fun addWorkoutToDatabase(workout: Workout)
     }
 
 
